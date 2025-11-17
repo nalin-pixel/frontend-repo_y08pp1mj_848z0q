@@ -13,10 +13,10 @@ export default function Perks() {
         <ul className="grid gap-3">
           {perks.map((p) => (
             <li key={p} className="flex items-start gap-3">
-              <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600">
+              <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-400/20">
                 <Check size={16} />
               </span>
-              <span className="text-slate-700">{p}</span>
+              <span className="text-slate-200">{p}</span>
             </li>
           ))}
         </ul>

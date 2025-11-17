@@ -31,7 +31,7 @@ export default function FinalCTA() {
   return (
     <section className="py-20">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Stop just applying. Start landing.</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Stop just applying. Start landing.</h2>
         <form onSubmit={submit} className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-2">
           <input
             type="email"
@@ -39,19 +39,19 @@ export default function FinalCTA() {
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="Enter your email"
-            className="w-full rounded-md border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-md border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="rounded-md bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 font-medium shadow-sm transition-transform hover:scale-[1.01] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+            className="rounded-md bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-6 py-3 font-medium shadow-sm transition-transform hover:scale-[1.01] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
           >
             {status === 'loading' ? 'Joining…' : 'Join the Waitlist'}
           </button>
         </form>
-        <p className="mt-3 text-sm text-slate-500">No spam. Just launch updates and early access.</p>
+        <p className="mt-3 text-sm text-slate-400">No spam. Just launch updates and early access.</p>
         {status !== 'idle' && (
-          <div className={`mt-4 text-sm ${status === 'success' ? 'text-emerald-700' : status === 'error' ? 'text-red-600' : 'text-slate-600'}`}>
+          <div className={`mt-4 text-sm ${status === 'success' ? 'text-emerald-300' : status === 'error' ? 'text-red-300' : 'text-slate-300'}`}>
             {message}
           </div>
         )}

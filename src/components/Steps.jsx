@@ -27,11 +27,11 @@ export default function Steps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: i * 0.05 }}
-              className="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm"
+              className="rounded-2xl border border-white/10 p-6 bg-white/5 shadow-sm"
             >
-              <div className="text-sm font-semibold text-slate-500">Step {i + 1}</div>
-              <div className="mt-2 text-2xl font-bold tracking-tight text-slate-900">{s.title}</div>
-              <p className="mt-2 text-slate-600">{s.text}</p>
+              <div className="text-sm font-semibold text-slate-400">Step {i + 1}</div>
+              <div className="mt-2 text-2xl font-bold tracking-tight text-white">{s.title}</div>
+              <p className="mt-2 text-slate-300">{s.text}</p>
             </motion.div>
           ))}
         </div>
